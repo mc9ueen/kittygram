@@ -20,6 +20,7 @@ services:
   frontend:
     image: jup1ter/kittygram_frontend
     env_file: .env
+    command: cp -r /app/build/. /static/
     volumes:
       - static:/static
   gateway:
